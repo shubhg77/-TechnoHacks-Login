@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="form-box">
+        <h1>Login Here</h1>
+        <div class="input-box">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <input type="email" placeholder="Email Id">
+        </div>
+        <div class="input-box">
+            <i class="fa fa-key" aria-hidden="true"></i>
+
+            <input id="my-input" type="password" placeholder="Enter your Password ">
+            <span class="eye" onclick="myfunction()"><i id="hide1" class="fa fa-eye"></i>
+                <i id="hide2" class="fa fa-eye-slash" ></i></span>
+            
+
+
+        </div>
+        <button class="btn" type="submit">LOG IN</button>
+    </div>
+    <script>
+        function myfunction(){
+            var x = document.getElementById("my-input");
+            var y = document.getElementById("hide1");
+            var z = document.getElementById("hide2");
+
+            if(x.type==='password'){
+                x.type="text";
+                y.style.display = "block";
+                z.style.display  = "none"
+            }
+            else{
+                x.type="password";
+                y.style.display = "none";
+                z.style.display  = "block"
+            }
+        }
+    </script>
+</body>
+</html>
